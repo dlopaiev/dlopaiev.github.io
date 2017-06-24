@@ -1,0 +1,221 @@
+body {
+    background-color: #f2efe8;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {    
+    margin: 0 auto;    
+    background-color: #252839;    
+}
+
+.headerbox {
+    width: 1024px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.undernavblock {    
+    margin: 0 auto;
+    background-color: #c2dde6;
+    padding-bottom: 450px;
+    -webkit-animation: mymove 15s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 15s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {background-color: #92c3d3;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {background-color: #92c3d3;}
+}
+
+.topnavigation {        
+    margin: 0 auto;    
+    overflow: hidden;
+    background-color: #000;//#333;
+    position: relative;
+}
+
+.topnavigation a {
+    float: left;
+    display: block;
+    color: white;    
+    text-transform: uppercase;
+    text-shadow: 1px 1px #283018;
+    text-align: center;
+    padding: 12px 12px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.topnavigation a.active {
+    background-color: #f2b632;//#4CAF50;    
+    color: white;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1024px;    
+    min-height: calc(100vh - 110px);
+}
+
+.footer {
+    margin: 0 auto;
+    background-color: #252839;     
+}
+
+.footerbox {
+    width: 1024px;
+    height: 70px;
+    margin: 0 auto;
+    padding-top: 30px;    
+}
+
+.footerbox p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+
+/*
+.topnavigation a:hover {
+    background-color: #DDD;
+    color: black;
+}*/
+
+.gameField{
+margin: 0 auto;
+width: 1024px;
+}
+
+.gameTable {
+position: relative;
+background-image: url("../img/table.png");
+background-repeat: no-repeat;
+background-position: center;
+height: 645px;
+background-size: 1024px 645px;
+}
+
+#player2 img {
+position: relative;
+left: 440px;
+top: 80px;
+}
+
+#player1 img {
+position: relative;
+left: 440px;
+top: 185px;
+}
+
+.playerTotalBox {
+position: relative;
+width: 50px;
+left: 400px;
+border-radius: 3px;
+background-color: rgba(0, 0, 0, 0.70);
+text-align: center;
+color: rgba(255, 255, 255, 0.85);
+animation-name: totalFadeIn;
+animation-duration: 2s;
+}
+
+.playerTotalBox p {
+padding: 5px 0px;
+}
+
+.fadeIn {
+animation-name: totalFadeIn;
+animation-duration: 3s;
+animation-fill-mode: forwards;
+animation-iteration-count: 1;
+}
+
+.fadeOut {
+animation-name: totalFadeOut;
+animation-duration: 3s;
+animation-fill-mode: forwards;
+animation-iteration-count: 1;
+}
+
+@keyframes totalFadeIn {
+
+from {color: rgba(255, 255, 255, 0.3)}
+to {color: rgba(255, 255, 255, 0.85)}
+
+}
+
+@keyframes totalFadeOut {
+
+from {color: rgba(255, 255, 255, 0.85)}
+to {color: rgba(255, 255, 255, 0.3)}
+
+}
+
+#infoBox {
+position: absolute;
+left: 300px;
+top: 300px;
+width: 100px;
+height: 50px;
+border-radius: 3px;
+background-color: rgb(0, 0, 0);
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+text-align: center;
+color: rgba(255, 255, 255, 0.85);
+opacity: 0;
+}
+
+.infoBoxFadeIn {
+animation-name: iBoxFadeIn;
+animation-duration: 2s;
+animation-fill-mode: forwards;
+animation-iteration-count: 1;
+}
+
+.infoBoxFadeOut {
+animation-name: iBoxFadeOut;
+animation-duration: 2s;
+animation-fill-mode: forwards;
+animation-iteration-count: 1;
+}
+
+@keyframes iBoxFadeIn {
+
+from {opacity: 0}
+to {opacity: 0.85}
+
+}
+
+@keyframes iBoxFadeOut {
+
+from {opacity: 0.85}
+to {opacity: 0}
+
+}
+
+.button {
+position: absolute;
+top:550px;
+width: 80px;
+border-radius: 3px;
+background-color: rgba(0, 128, 43, 0.85);
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+text-align: center;
+color: rgba(255, 255, 255, 0.85);
+}
+
+.button:hover {
+cursor: hand;
+cursor: pointer;
+}
+
+.button p {
+padding: 7px 0px;
+}
