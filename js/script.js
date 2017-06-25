@@ -2,8 +2,7 @@ window.onload = function readyToGo() {
 
   var player1 = document.getElementById("player1");
   var player2 = document.getElementById("player2");
-  var hitCard = document.getElementById("hitCard");
-  //var tryAgain = document.getElementById("tryAgain");
+  var hitCard = document.getElementById("hitCard");  
   var standPat = document.getElementById("standPat");
   var playerTotalBox = document.getElementsByClassName("playerTotalBox");
   var playerTotal = document.querySelectorAll("p#playerTotal");
@@ -17,12 +16,6 @@ window.onload = function readyToGo() {
   var counter = 0;
   var cardAdded = false;
 
-  console.log(playerTotal);
-
-  //informational purpose
-  //var arrayValues = document.getElementById("arrayValues");
-  //alert("Im on the begining of main function");
-
   playNewGame();
 
   function playNewGame(){
@@ -33,12 +26,9 @@ window.onload = function readyToGo() {
     player2Total = 0;
     cardsOnHands = [];
     counter = 0;
-
-    //winnerInfo.innerHTML = "";
-    //alert("Im on the begining of playNewGame function");
+    
     playerTotal[1].className = "FadeIn";
-
-
+    
     //first 4 cards for two players
     while (cardsOnHands.length < 4){
       comingCard = Math.floor(Math.random() * 52) + 1;
@@ -81,17 +71,7 @@ window.onload = function readyToGo() {
     movePlayerCardsLeft(player2);
     playerTotal[1].innerHTML = player1Total;
     checkPlayer1();
-
-    //arrayValues.innerHTML = cardsOnHands.toString();
-    //alert("Im in the end of playNewGame function");
-  }//end playNewGame
-
-
-  //tryAgain.addEventListener("click", function(){
-  //player1.innerHTML = "";
-  //player2.innerHTML = "";
-  //playNewGame();
-  //});
+  }//end playNewGame  
 
   //Don't take any cards. Check the winner.
   standPat.addEventListener("click", function(){
@@ -118,10 +98,7 @@ window.onload = function readyToGo() {
 
   //take 1 more card button
   hitCard.addEventListener("click", function(){
-    //alert("Im on the begining of hitCard function");
     cardAdded = false;
-    //playerTotal[1].removeAttribute("class");
-    //playerTotal[1].className = "FadeOut";
     do {
       comingCard = Math.floor(Math.random() * 52) + 1;
       if (cardsOnHands.lastIndexOf(comingCard) === -1){
@@ -141,10 +118,7 @@ window.onload = function readyToGo() {
         cardAdded = true;
       }
     } while (!cardAdded)
-    //setTimeout(playerTotal[1].removeAttribute("class"), 5000);
-    //alert("Im in the end of hitCard function");
   });
-
 
   function checkPlayer1() {
     playerTotal[1].removeAttribute("class");
@@ -159,7 +133,6 @@ window.onload = function readyToGo() {
       setTimeout(playNewGame, 2000);
       setTimeout(iBoxFadeOut, 2000);
     }else{
-      //arrayValues.innerHTML = cardsOnHands.toString();
     }
   }//end checkPlayer1
 
@@ -200,7 +173,4 @@ window.onload = function readyToGo() {
   function iBoxFadeOut(){
     infoBox.className = "infoBoxFadeOut";
   }
-
-  //console.log();
-  //alert("Im in the end of main function");
 }//end readyToGo
